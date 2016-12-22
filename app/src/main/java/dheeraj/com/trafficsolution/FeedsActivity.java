@@ -56,10 +56,10 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.feeds_view_pager);
         FeedsPagerAdapter adapter = new FeedsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_HOME), "HOME");
+//        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_HOME), "HOME");
         adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_FEED), "FEED");
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(1);
+//        viewPager.setCurrentItem(1);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.feeds_tab_layout);
         tabLayout.setupWithViewPager(viewPager);
 

@@ -48,7 +48,6 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        MultiDex.install(this);
         Firebase.setAndroidContext(this);
         firebaseAuth = FirebaseAuth.getInstance();
         email = (EditText) findViewById(R.id.email);

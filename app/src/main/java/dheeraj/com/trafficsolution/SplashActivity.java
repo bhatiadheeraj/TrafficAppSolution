@@ -18,7 +18,6 @@ public class SplashActivity extends AppCompatActivity {
     public static final String FireBaseShared_KEY = "FireBaseShared_KEY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        MultiDex.install(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         firebaseAuth = FirebaseAuth.getInstance();

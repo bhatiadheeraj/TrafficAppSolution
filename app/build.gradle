@@ -38,7 +38,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0-beta1'
     compile 'com.android.support:design:24.0.0-beta1'
-    compile 'com.google.android.gms:play-services:9.2.1'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.android.support:percent:23.2.0'
     compile 'com.firebaseui:firebase-ui-database:0.4.0'
