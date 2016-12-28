@@ -13,15 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-<<<<<<< HEAD
 package dheeraj.com.trafficsolution;
 
-=======
-
-package dheeraj.com.trafficsolution;
-
-
->>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -46,16 +39,9 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import java.util.HashMap;
 import java.util.Map;
 
-<<<<<<< HEAD
 public class ProfileActivity extends BaseActivity implements View.OnClickListener,
         GoogleApiClient.OnConnectionFailedListener {
 
-=======
-
-public class ProfileActivity extends BaseActivity implements
-        View.OnClickListener,
-        GoogleApiClient.OnConnectionFailedListener {
->>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
     private static final String TAG = "ProfileActivity";
     private ViewGroup mProfileUi;
     private FirebaseAuth mAuth;

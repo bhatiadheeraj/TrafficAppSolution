@@ -50,7 +50,6 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feeds);
-<<<<<<< HEAD
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.feeds_view_pager);
         FeedsPagerAdapter adapter = new FeedsPagerAdapter(getSupportFragmentManager());
@@ -61,18 +60,6 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
         adapter.addFragment(new ParkingFragment(), "Parking");
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(1);
-=======
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
-        ViewPager viewPager = (ViewPager) findViewById(R.id.feeds_view_pager);
-        FeedsPagerAdapter adapter = new FeedsPagerAdapter(getSupportFragmentManager());
-//        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_HOME), "HOME");
-        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_FEED), "FEED");
-        viewPager.setAdapter(adapter);
-//        viewPager.setCurrentItem(1);
->>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
         TabLayout tabLayout = (TabLayout) findViewById(R.id.feeds_tab_layout);
         tabLayout.setupWithViewPager(viewPager);
 
@@ -112,10 +99,6 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
                     postLikesRef.child(postKey).child(userKey).setValue(ServerValue.TIMESTAMP);
                 }
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
             @Override
             public void onCancelled(DatabaseError firebaseError) {
 
