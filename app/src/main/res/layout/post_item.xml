@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -6,11 +7,36 @@
     android:layout_margin="8dp"
     android:layout_height="wrap_content"
     app:cardCornerRadius="2dp">
+=======
+<!--
+  ~ Copyright 2016 Google Inc. All Rights Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content" >
+
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+<<<<<<< HEAD
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -67,6 +93,67 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:scaleType="centerCrop" />
+=======
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/post_author_icon"
+            android:layout_margin="2dp"
+            android:src="@drawable/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/post_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/post_author_icon"
+            android:layout_marginLeft="4dp"
+            android:textSize="18sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:text="Dheeraj Bhatia"/>
+        <TextView
+            android:id="@+id/post_timestamp"
+            android:layout_width="wrap_content"
+            android:text="5 days ago"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="#b0b0b0"
+            android:textSize="13sp"
+            android:layout_below="@+id/post_author_name"
+            android:layout_alignLeft="@+id/post_author_name"
+            android:layout_alignStart="@+id/post_author_name" />
+<View android:background="@color/divider"
+    android:layout_width="match_parent"
+    android:id="@+id/divider"
+    android:layout_height="1dp"
+    android:layout_below="@+id/post_author_icon"/>
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="how are doing other farmers ?"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="21sp"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/divider"
+            />
+
+    </RelativeLayout>
+
+        <ImageView
+        android:id="@+id/post_photo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/imageupload"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop" />
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
         <View android:background="@color/divider"
             android:layout_width="match_parent"
             android:id="@+id/divider2"
@@ -93,6 +180,10 @@
                 android:layout_toEndOf="@+id/post_num_likes"
                 android:layout_marginLeft="19dp"
                 android:layout_marginStart="19dp" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
             <TextView
                 android:id="@+id/post_num_likes"
                 android:layout_width="wrap_content"
@@ -107,5 +198,9 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginStart="12dp" />
         </RelativeLayout>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
     </LinearLayout>
 </android.support.v7.widget.CardView>

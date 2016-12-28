@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
 package dheeraj.com.trafficsolution;
 
 import android.support.multidex.MultiDex;
@@ -8,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 public class BaseActivity extends AppCompatActivity {
     private static final String TAG_DIALOG_FRAGMENT = "tagDialogFragment";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1dc0bf4613f445b2cd32cfccf8a7b7748f8a0ad8
     protected void showProgressDialog(String message) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         Fragment prev = getExistingDialogFragment();
