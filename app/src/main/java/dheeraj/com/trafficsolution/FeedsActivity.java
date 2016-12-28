@@ -50,16 +50,16 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feeds);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.feeds_view_pager);
         FeedsPagerAdapter adapter = new FeedsPagerAdapter(getSupportFragmentManager());
-//        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_HOME), "HOME");
-        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_FEED), "FEED");
+
+        //Adding Fragments!
+        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_FEED), "Congestion");
+        adapter.addFragment(PostsFragment.newInstance(PostsFragment.TYPE_FEED), "Feed");
+        adapter.addFragment(new ParkingFragment(), "Parking");
         viewPager.setAdapter(adapter);
-//        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(1);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.feeds_tab_layout);
         tabLayout.setupWithViewPager(viewPager);
 
@@ -99,7 +99,6 @@ public class FeedsActivity extends AppCompatActivity implements PostsFragment.On
                     postLikesRef.child(postKey).child(userKey).setValue(ServerValue.TIMESTAMP);
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError firebaseError) {
 

@@ -1,5 +1,3 @@
-
-
 package dheeraj.com.trafficsolution;
 
 import android.support.multidex.MultiDex;
@@ -9,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 
 public class BaseActivity extends AppCompatActivity {
     private static final String TAG_DIALOG_FRAGMENT = "tagDialogFragment";
-
 
     protected void showProgressDialog(String message) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();

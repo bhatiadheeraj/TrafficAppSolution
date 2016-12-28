@@ -40,7 +40,6 @@ public class SignIn extends AppCompatActivity {
     String displayname;
     String photourl;
 
-
     public static final String FireBaseSharedPref = "FireBaseSharedPref";
     public static final String FireBaseShared_KEY = "FireBaseShared_KEY";
 
@@ -70,28 +69,23 @@ public class SignIn extends AppCompatActivity {
                 }
 
 
-// Force user to fill up the form
+                // Force user to fill up the form
                 if (emailid.equals("") && passwordtext.equals("")) {
-                    Toast.makeText(getApplicationContext(),
-                            "Please complete the sign up form",
-                            Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(getApplicationContext(), "Please complete the sign up form", Toast.LENGTH_LONG).show();
                     email.setError("You can not leave it blank.");
                     password.setError("You can not leave it blank.");
-
-                } else {
-
+                }
+                else {
                     final ProgressDialog rd = new ProgressDialog(SignIn.this);
                     rd.setTitle("Please Wait !");
                     rd.setMessage("We are setting everything .");
+                    rd.setCancelable(false);
                     rd.show();
-
 
                     firebaseAuth.signInWithEmailAndPassword(emailid, passwordtext).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(Exception e) {
                             Toast.makeText(getApplicationContext(), "Incorrect passoword or email !", Toast.LENGTH_LONG).show();
-
                             firebaseAuth.signOut();
                             finish();
                         }
@@ -104,20 +98,16 @@ public class SignIn extends AppCompatActivity {
                             editor.putBoolean(FireBaseShared_KEY,true);
                             editor.commit();
 
-
-
                             final FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference myRef = database.getReference("people").child(authResult.getUser().getUid());
                             myRef.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
 
-
                                     displayname = String.valueOf(dataSnapshot.child("displayNames").getValue());
                                     photourl = String.valueOf(dataSnapshot.child("photoUrls").getValue());
                                     Log.e("displayNames", "" + displayname);
                                     Log.e("photoUrls", "" + photourl);
-
 
                                     UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                             .setDisplayName(displayname)
@@ -133,7 +123,6 @@ public class SignIn extends AppCompatActivity {
                                      }
                                  }
                                             });
-
 
                                     Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
 

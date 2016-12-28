@@ -13,9 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package dheeraj.com.trafficsolution;
-
 
 import android.content.Context;
 import android.content.Intent;
@@ -41,10 +39,9 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import java.util.HashMap;
 import java.util.Map;
 
-
-public class ProfileActivity extends BaseActivity implements
-        View.OnClickListener,
+public class ProfileActivity extends BaseActivity implements View.OnClickListener,
         GoogleApiClient.OnConnectionFailedListener {
+
     private static final String TAG = "ProfileActivity";
     private ViewGroup mProfileUi;
     private FirebaseAuth mAuth;
